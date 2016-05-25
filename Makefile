@@ -22,6 +22,8 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  up         to up web server"
+	@echo "  front      to build frontend javascripts and stylesheets"
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -48,6 +50,14 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 	@echo "  dummy      to check syntax errors of document sources"
+
+.PHONY: up
+up:
+	(cd build; python -m http.server)
+
+.PHONY: front
+front:
+	`npm bin`/webpack
 
 .PHONY: clean
 clean:
