@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Sphinx Frontend Example documentation build configuration file, created by
-# sphinx-quickstart on Wed May 25 16:02:30 2016.
+# Sphinx React Example documentation build configuration file, created by
+# sphinx-quickstart on Wed May 25 17:40:34 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -29,7 +29,9 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = [
+    'sphinx.ext.doctest',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Sphinx Frontend Example'
+project = 'Sphinx React Example'
 copyright = '2016, TakesxiSximada'
 author = 'TakesxiSximada'
 
@@ -64,7 +66,7 @@ release = '0.1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'ja'
+language = None
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -121,7 +123,7 @@ html_theme = 'alabaster'
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-#html_title = 'Sphinx Frontend Example v0.1'
+#html_title = 'Sphinx React Example v0.1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -203,7 +205,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SphinxFrontendExampledoc'
+htmlhelp_basename = 'SphinxReactExampledoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -225,7 +227,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SphinxFrontendExample.tex', 'Sphinx Frontend Example Documentation',
+    (master_doc, 'SphinxReactExample.tex', 'Sphinx React Example Documentation',
      'TakesxiSximada', 'manual'),
 ]
 
@@ -255,7 +257,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinxfrontendexample', 'Sphinx Frontend Example Documentation',
+    (master_doc, 'sphinxreactexample', 'Sphinx React Example Documentation',
      [author], 1)
 ]
 
@@ -269,8 +271,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'SphinxFrontendExample', 'Sphinx Frontend Example Documentation',
-     author, 'SphinxFrontendExample', 'One line description of project.',
+    (master_doc, 'SphinxReactExample', 'Sphinx React Example Documentation',
+     author, 'SphinxReactExample', 'One line description of project.',
      'Miscellaneous'),
 ]
 
